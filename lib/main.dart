@@ -1,3 +1,4 @@
+import 'package:black_camera/Core/dependency/dependency.dart';
 import 'package:black_camera/View/Sreen/recording_scree.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,6 +6,9 @@ import 'package:flutter/services.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+  DependancyInjection di = DependancyInjection();
+
+  di.dependencies();
   runApp(const MyApp());
 }
 
